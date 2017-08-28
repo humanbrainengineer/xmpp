@@ -37,4 +37,23 @@ http://localhost:5280/http-bind/
 
 -------------------------------------------
 
+sudo prosodyctl adduser test@localhost
+
+apt-get install empathy
+
+--------------------------------------------
+Next, in the Jabber ID box, enter test@localhost; and for the Password, enter
+password .
+5. Once your details are entered, pop open the Advanced box and uncheck
+Encryption required, since we won't need this while developing.
+6. After clicking on Done, your client should be connected to your local XMPP
+server; it's not very exciting so far.
+7. To doubly verify that you are connected, you can check the Prosody log file and
+you should see entries similar to the following:
+$ sudo tail /var/log/prosody/prosody.log
+Feb 09 20:37:43 c2s2250e30 info Client connected
+Feb 09 20:37:43 c2s2250e30 info Authenticated as test2@localhost
+
+
+
 
