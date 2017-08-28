@@ -20,3 +20,21 @@ sudo service prosody restart
 
 -----------------------------------
 telnet localhost 5222
+
+
+-----------------------------------
+
+iptables -A INPUT -p tcp --dport 5222 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 5222 -j ACCEPT
+
+iptables -A INPUT -p tcp --dport 5269 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 5269 -j ACCEPT
+
+telnet localhost 5222
+------------------------------------------------
+
+http://localhost:5280/http-bind/
+
+-------------------------------------------
+
+
